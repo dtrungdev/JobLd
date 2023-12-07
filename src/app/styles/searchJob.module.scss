@@ -1,0 +1,104 @@
+.wrapper {
+    background: linear-gradient(291deg, #189751 0%, #123138 54.89%);
+}
+
+.content {
+    padding: 64px 0;
+    font-family: 'Lexend', sans-serif;
+    .wellcome-text {
+        font-family: 'Lexend', sans-serif;
+        font-size: 2.8rem;
+        color: var(--white-color);
+        font-weight: 700;
+        line-height: 3.8rem;
+        padding-bottom: 32px;
+    }
+}
+
+.text-highlight {
+    color: var(--primary-color);
+}
+
+.box-search {
+    font-family: 'Lexend', sans-serif;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-job {
+    flex: 1;
+    input {
+        outline: none;
+        padding: 11px;
+        height: 56px;
+        width: 100%;
+        border-radius: 4px;
+        font-size: 1.6rem;
+        border: transparent;
+    }
+}
+
+.search-button {
+    button {
+        background-color: #01a24a;
+        font-size: 1.8rem;
+        height: 56px;
+        width: 240px;
+        border-radius: 4px !important;
+        border: #01a24a;
+        &:hover {
+            background-color: rgba($color: #0f7e09, $alpha: 0.9);
+        }
+    }
+}
+/////select
+.search-city {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+    .selection {
+        padding-left: 30px;
+    }
+    .location-icon {
+        font-size: 1.6rem;
+        position: absolute;
+        left: 17px;
+    }
+}
+
+.search-job {
+    position: relative;
+    .search-result {
+        position: absolute;
+    }
+    .search-result--hidden {
+        display: none;
+    }
+}
+
+.suggestion-job {
+    color: #dedede;
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.suggestion-job_tag {
+    display: flex;
+    gap: 12px;
+    .itag {
+        border-radius: 20px;
+        border: 1px solid #414042;
+        background-color: #0d0d0d;
+        padding: 6px 12px;
+        color: #dedede;
+    }
+}
