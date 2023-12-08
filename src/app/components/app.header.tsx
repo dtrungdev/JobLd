@@ -26,13 +26,13 @@ function Header() {
                 <div className={cl('nav-left')}>
                     <ul>
                         <li className={cl('nav-left_item')}>
-                            <Link href={''} title='Việc làm'>Việc làm</Link>
+                            <Link href={'/job'} title='Việc làm'>Việc làm</Link>
                         </li>
                         <li className={cl('nav-left_item')}>
                             <Link href={''}>Hồ sơ & CV</Link>
                         </li>
                         <li className={cl('nav-left_item')}>
-                            <Link href={''}>Công ty / Nhà tuyển dụng</Link>
+                            <Link href={'/company'}>Công ty </Link>
                         </li>
                         <li className={cl('nav-left_item')}>
                             <Link href={''}>Blog</Link>
@@ -40,9 +40,12 @@ function Header() {
                     </ul>
                 </div>
                 <div className={cl('nav-right')}>
-                    <Button className={cl('recruiter-btn')} >
+                        <Link href={'/recruiter'}>
+                    <Button className={cl('recruiter-btn')}>
+                     
                         Nhà Tuyển Dụng
                     </Button>
+                        </Link>
                     {isLogined ? (
                         <div className={cl('user')}>
                             <div className={cl('user-menu')}>

@@ -1,0 +1,62 @@
+@media (max-width: 990px) { 
+  .box {
+    padding: 30px 0 !important;
+  }
+  .left-side {
+    margin-bottom: 20px;
+  }
+ }
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+
+
+.wrapper {
+    background: linear-gradient(291deg, #189751 0%, #123138 54.89%);
+    min-height: calc(100vh - 72px);
+
+}
+.box {
+  padding: 120px 0;
+}
+
+.left-side {
+      animation: 1.5s fadeInUp;
+    .title {
+        color: #fff;
+        font-size: 3.4rem;
+        font-weight: 600;
+    }
+    .opinion {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: #fff;
+        font-size: 1.7rem;
+    }
+    .btn-start-recruit {
+        padding: 12px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--white-color) !important;
+   background-color: #01a24a !important;
+        border-color: #01a24a !important;
+    
+    &:hover {
+        background-color: #07b153 !important;
+        border-color: #07b153 !important;
+    }
+    }
+}
+
+.right-side {
+
+}

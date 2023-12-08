@@ -2,8 +2,7 @@ import classNames from 'classnames/bind';
 import Image from 'next/image';
 import styles from '../styles/footer.module.scss'
 import logo from '../../../public/logo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+
 
 const cl = classNames.bind(styles);
 function Footer() {

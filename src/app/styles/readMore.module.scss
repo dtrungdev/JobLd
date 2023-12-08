@@ -1,0 +1,23 @@
+.container {
+    position: absolute;
+    top: 10%;
+    left: 23%;
+    width: 50%;
+}
+
+.text {
+    display: inline;
+    width: 100%;
+}
+
+.read-or-hide {
+    display: block;
+    padding: 4px 8px;
+    text-align: center;
+    font-size: 1.6rem;
+    color: blue;
+    cursor: pointer;
+    .icon {
+        font-size: 1.5rem;
+    }
+}

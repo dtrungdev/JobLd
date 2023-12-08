@@ -8,7 +8,7 @@ import { useRef } from 'react';
 const cl = classNames.bind(styles);
 
 
-function TopCompanyRecruiter() {
+function TopCompany() {
 
     const sliderCompany = useRef<any>(null);
     const slider = useRef<any>(null);
@@ -138,7 +138,7 @@ function TopCompanyRecruiter() {
             <div className={cl('content', 'container')}>
                 <div className={cl('top-company_header')}>
                     <h2 id="id" className={cl('top-company_title')}>
-                       Nhà tuyển dụng hàng đầu
+                       Top công ty tuyển dụng 
                     </h2>
                     <span className={cl('slider-btn')}>
                         <div className={cl('direct-page')}>
@@ -176,4 +176,4 @@ function TopCompanyRecruiter() {
     );
 }
 
-export default TopCompanyRecruiter;
+export default TopCompany;

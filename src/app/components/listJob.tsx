@@ -8,12 +8,13 @@ import ListJobItem from './listJobItem';
 import Pagination from './pagination';
 import { useState } from 'react';
 import { useEffect, useRef } from 'react';
+import * as React from 'react'
 
 
 const cl = classNames.bind(styles);
 
 function ListJob() {
-    const tagBarRef = useRef(null);
+    const tagBarRef = React.useRef<any>(null);
     const [listJob, setListJob] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [currentLimit, setCurrentLimit] = useState(12);
@@ -23,11 +24,11 @@ function ListJob() {
 
     const handleShowTagRight = () => {
         setDisableButtonLeft(false);
-        const distanceToScroll = tagBarRef.current.offsetWidth;
+        const distanceToScroll = tagBarRef?.current?.offsetWidth;
         let scrollAmount = 0;
         const slideTimer = setInterval(() => {
             let step = 10;
-            tagBarRef.current.scrollLeft += step;
+            tagBarRef?.current?.scrollLeft += step;
             scrollAmount += Math.abs(step);
             console.log(scrollAmount);
             if (scrollAmount >= distanceToScroll) {
@@ -78,7 +79,7 @@ function ListJob() {
         { id: 4, name: 'Ngành nghề' },
     ];
 
-    const handlePageClick = (event) => {
+    const handlePageClick = (event: any) => {
         setCurrentPage(+event.selected + 1);
     };
 
@@ -98,7 +99,7 @@ function ListJob() {
                         <Pagination
                             currentPage={currentPage}
                             pageCount={20}
-                            onPageChange={(page) => setCurrentPage(page)}
+                            onPageChange={(page: number) => setCurrentPage(page)}
                         />
                     </div>
                 </div>

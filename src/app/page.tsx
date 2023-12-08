@@ -1,7 +1,7 @@
 import Header from "./components/app.header";
 import SearchJob from "./components/searchJob";
 import ListJob from "./components/listJob";
-import TopCompanyRecruiter from "./components/topCompanyRecruiter";
+import TopCompany from './components/topCompany'
 
 import Footer from "./components/app.footer";
 import classNames from "classnames/bind";
@@ -15,7 +15,7 @@ export default function Home() {
      
           <SearchJob />
           {/* <ListJob /> */}
-          <TopCompanyRecruiter />
+          <TopCompany />
           <Footer /> 
        
     </>

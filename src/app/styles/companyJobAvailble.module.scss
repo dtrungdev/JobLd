@@ -1,0 +1,178 @@
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 0 !important;
+    }
+    .list-job_item {
+        padding: 8px !important;
+        width: 100% !important;
+    }
+    .avatar {
+        border: 1px solid #c3c3c3 !important;
+    }
+    .title {
+        flex-direction: column !important;
+        .col-title {
+            padding: 8px 0;
+        }
+        .job-title {
+            margin-bottom: 8px;
+        }
+        .job-descript {
+            white-space: wrap !important;
+        }
+    }
+    .action {
+        align-items: end !important;
+    }
+    .col-salary {
+        margin: 8px 0;
+        text-align: left !important;
+    }
+
+    .title {
+        .col-title {
+            white-space: wrap !important;
+        }
+    }
+    .right {
+        max-width: 100%;
+    }
+}
+
+.wrapper {
+    padding: 0 10px;
+    font-family: 'Lexend', sans-serif;
+    .list-job_item {
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 32px;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        padding: 12px;
+        &:hover {
+            background: #f6f6f6;
+        }
+    }
+    &:hover {
+        .job-title {
+            color: var(--primary-color);
+        }
+    }
+}
+.left {
+    margin-right: 16px;
+}
+.right {
+    flex: 1;
+    height: 100%;
+    gap: 12px;
+}
+
+.avatar {
+    width: 100px;
+    background-color: #fff;
+    border: 1px solid #e9eaec;
+    border-radius: 8px;
+    .company-logo {
+        overflow: hidden;
+        align-items: center;
+        background: #fff;
+        border-radius: 5px;
+        aspect-ratio: 1/1;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        padding: 2px;
+        width: 100%;
+    }
+    img {
+        background: #fff;
+    }
+    .img-responsive {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    .col-salary {
+        text-align: end;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--primary-color);
+        padding-left: 10px;
+    }
+}
+.col-title {
+    flex: 1;
+    .job-title {
+        display: block;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: var(--text-color);
+        line-height: 2rem;
+        text-overflow: ellipsis;
+    }
+    .job-descript {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #464646;
+    }
+}
+
+.footer {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    .job-expire,
+    .address,
+    .update {
+        background: #f4f5f5;
+        border-radius: 4px;
+        color: #000000;
+        display: inline-block;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 16px;
+        padding: 4px 8px;
+    }
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    .btn-apply {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+        font-size: 1.4rem;
+        line-height: 2rem;
+        white-space: nowrap;
+        padding: 6px 16px;
+        &:hover {
+            background-color: #0aa934;
+            border-color: #0aa934;
+        }
+    }
+}
+
+.like {
+    .save-job {
+        color: var(--primary-color);
+        padding: 3px 8px;
+        border-radius: 4px;
+        background-color: #deffe2;
+        font-size: 1.8rem;
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+}
+
