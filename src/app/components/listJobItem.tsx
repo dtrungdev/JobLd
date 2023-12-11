@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from './ListJobItem.module.scss';
+
+import styles from '../styles/listJobItem.module.scss'
 import classNames from 'classnames/bind';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
+
 
 const cl = classNames.bind(styles);
 
@@ -13,7 +13,7 @@ function ListJobItem({ data }) {
                 <div className={cl('header')}>
                     <div className={cl('avatar')}>
                         <div className={cl('company-logo')}>
-                            <img src={data.Company.logo} alt="" className={cl('img-responsive')} />
+                            <img src={data.logo} alt="" className={cl('img-responsive')} />
                         </div>
                     </div>
                     <div className={cl('col-title', 'text-ellipsis')}>
@@ -23,7 +23,7 @@ function ListJobItem({ data }) {
                             </a>
                         </h3>
                         <a href="" className={cl('job-descript', 'text-ellipsis')}>
-                            {data.Company.name}
+                            {data.name}
                         </a>
                     </div>
                 </div>
@@ -42,7 +42,8 @@ function ListJobItem({ data }) {
                     </div>
                     <div className={cl('col-like')}>
                         <button className={cl('save-job', 'btn')}>
-                            <FontAwesomeIcon icon={faHeart} className={cl('icon')} />
+                        
+                            <i className={cl('fa-regular fa-heart','icon')}></i>
                         </button>
                     </div>
                 </div>

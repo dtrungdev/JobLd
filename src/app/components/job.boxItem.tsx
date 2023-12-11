@@ -1,11 +1,11 @@
-import styles from "../styles/companyJobAvailble.module.scss";
+import styles from "../styles/jobBoxItem.module.scss";
 import classNames from "classnames/bind";
 
 import { Button } from "react-bootstrap";
 
 const cl = classNames.bind(styles);
 
-function JobAvailable() {
+function JobBoxItem() {
     return (
         <div className={cl("wrapper")}>
             <div className={cl("list-job_item")}>
@@ -89,7 +89,8 @@ function JobAvailable() {
                                     <button className={cl("save-job", "btn")}>
                                         <i
                                             className={cl(
-                                                "fa-regular fa-heart"
+                                                "fa-regular fa-heart",
+                                                "location-icon"
                                             )}
                                         ></i>
                                     </button>
@@ -103,4 +104,4 @@ function JobAvailable() {
     );
 }
 
-export default JobAvailable;
+export default JobBoxItem;

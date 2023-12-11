@@ -11,15 +11,16 @@
     background: linear-gradient(291deg, #189751 0%, #123138 54.89%);
 }
 .content {
+    font-family: "Lexend", "san-serif";
     padding-top: 48px;
     padding-bottom: 10px;
 }
 
 .footer-brand {
-    font-family: 'Lexend', 'san-serif';
+    font-family: "Lexend", "san-serif";
     .footer-logo {
-        width: 81px;
-        height: 81px;
+        width: 60px;
+        height: 60px;
     }
     .footer-like {
         color: #607d8b;
@@ -39,9 +40,9 @@
     color: var(--white-color);
     .title {
         font-weight: 600;
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     .info {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 }

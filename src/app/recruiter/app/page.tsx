@@ -19,11 +19,10 @@ function RecruiterApp() {
     ];
     const [isTurnOn, setIsTurnOn] = useState(false);
     const styleTurnOff = {
-        transform: 'translate3d(0px,0,0)',
+        transform: 'translate3d(2px,0,0)',
     };
     const styleTurnOn = {
-        transform: 'translate3d(14px,0,0)',
-        backgroundColor: '#196703',
+        transform: 'translate3d(17px,0,0)',
     };
     return (
         <>

@@ -79,12 +79,12 @@ function ProfileAddingInfo() {
                             </div>
                             <div className={cl('info')}>
                                 <div className={cl('row', 'align-items-center')}>
-                                    <h1 className={cl('contact-name', 'col-12', 'col-lg-6')}>
+                                    <h2 className={cl('contact-name', 'col-12', 'col-lg-6')}>
                                         {isChangeInfo ? objFormInfo.fullname : 'Họ và tên'}
-                                    </h1>
-                                    <h2 className={cl('position-name', 'col-12', 'col-lg-6')}>
-                                        ({isChangeInfo ? objFormInfo.title : 'Vị trí ứng tuyển'} )
                                     </h2>
+                                    <h3 className={cl('position-name', 'col-12', 'col-lg-6')}>
+                                        ({isChangeInfo ? objFormInfo.title : 'Vị trí ứng tuyển'} )
+                                    </h3>
                                 </div>
                                 <div className={cl('infos', 'row', 'align-items-center')}>
                                     <div className={cl('info-item', 'col-6')}>

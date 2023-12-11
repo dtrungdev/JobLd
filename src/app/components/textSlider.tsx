@@ -1,17 +1,17 @@
-import classNames from 'classnames/bind';
-import styles from '../styles/searchJob.module.scss'
-import { useState, useEffect } from 'react';
+import classNames from "classnames/bind";
+import styles from "../styles/searchJob.module.scss";
+import { useState, useEffect } from "react";
 
 const cl = classNames.bind(styles);
 
 function TextSlider() {
     const arrText = [
-        'Việc làm mới',
-        'Công ty phù hợp',
-        'Định hướng nghề nghiệp',
-        'Phúc lợi tốt',
-        'CV ấn tượng',
-        'Kinh nghiệm mới',
+        "Việc làm mới",
+        "Công ty phù hợp",
+        "Định hướng nghề nghiệp",
+        "Phúc lợi tốt",
+        "CV ấn tượng",
+        "Kinh nghiệm mới",
     ];
     const [index, setIndex] = useState(0);
 
@@ -25,8 +25,9 @@ function TextSlider() {
     }, [index]);
 
     return (
-        <h2 className={cl('wellcome-text')}>
-            <span className={cl('text-highlight')}>{arrText[index]}</span> dành cho bạn.
+        <h2 className={cl("wellcome-text")}>
+            <span className={cl("text-highlight")}>{arrText[index]}</span> dành
+            cho bạn.
         </h2>
     );
 }

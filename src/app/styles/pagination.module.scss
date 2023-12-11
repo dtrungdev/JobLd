@@ -1,0 +1,25 @@
+.btn-arrow {
+    align-items: center;
+    aspect-ratio: 1/1;
+    border: 1px solid #00b14f;
+    border-radius: 50%;
+    color: #00b14f !important;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 32px;
+    .icon {
+        font-size: 1.6rem;
+    }
+}
+.btn-arrow--disable {
+    align-items: center;
+    aspect-ratio: 1/1;
+    border: 1px solid #a8a8a8;
+    border-radius: 50%;
+    color: #adadad !important;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 32px;
+}

@@ -4,10 +4,10 @@
 
 .content {
     padding: 64px 0;
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     .wellcome-text {
-        font-family: 'Lexend', sans-serif;
-        font-size: 2.8rem;
+        font-family: "Lexend", sans-serif;
+        font-size: 2.6rem;
         color: var(--white-color);
         font-weight: 700;
         line-height: 3.8rem;
@@ -20,7 +20,7 @@
 }
 
 .box-search {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Lexend", sans-serif;
     display: flex;
     width: 100%;
     align-items: center;
@@ -32,7 +32,7 @@
     input {
         outline: none;
         padding: 11px;
-        height: 56px;
+        height: 52px;
         width: 100%;
         border-radius: 4px;
         font-size: 1.6rem;
@@ -43,19 +43,21 @@
 .search-button {
     button {
         background-color: #01a24a;
-        font-size: 1.8rem;
-        height: 56px;
-        width: 240px;
+        font-size: 1.6rem;
+        height: 52px;
+        width: 220px;
         border-radius: 4px !important;
-        border: #01a24a;
+        border: 1px solid #01a24a;
         &:hover {
-            background-color: rgba($color: #0f7e09, $alpha: 0.9);
+            background-color: rgba($color: #0b9f04, $alpha: 0.9);
+            border: 1px solid #0b9f04;
         }
     }
 }
 /////select
 .search-city {
-    height: 56px;
+    font-size: 1.5rem;
+    height: 52px;
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -65,7 +67,7 @@
         padding-left: 30px;
     }
     .location-icon {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         position: absolute;
         left: 17px;
     }
@@ -87,7 +89,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 

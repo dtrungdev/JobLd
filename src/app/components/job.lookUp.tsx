@@ -1,26 +1,15 @@
 'use client'
-
-import styles from '../styles/searchJob.module.scss';
 import classNames from 'classnames/bind';
-
-import { Button } from 'react-bootstrap';
-
-import { useEffect, useState, useRef } from 'react';
-
-import { Wrapper as PopperWrapper } from './popper';
-import SearchItem from './searchItem';
-import Select from './select';
-import TextSlider from './textSlider';
+import styles from '../styles/jobLookUp.module.scss'
+import { Button, Form } from 'react-bootstrap';
+import SearchItem from '../components/searchItem'
+import Select from '../components/select'
+import { Wrapper as PopperWrapper } from '../components/popper';
+import { useState, useEffect } from 'react';
 
 
 const cl = classNames.bind(styles);
-
-function SearchJob() {
- 
-    const handleChooseSearchItem = (event: object) => {
-        
-    };
-
+function JobLookUp() {
     const [searchValue, setSearchValue] = useState('');
     const [searchResult, setSearchResult] = useState([]);
 
@@ -91,18 +80,41 @@ function SearchJob() {
         { id: 63, name: ' Cà Mau' },
     ];
 
-    const [currentPage, setCurrentPage] = useState(1);
-    const [limit, setLimit] = useState(14);
+    const fetchPostion = async () => {
+        // let response = await fetchPositionToSearch();
+        // if (response && response.data && response.data.EC === 0) {
+        //     setSearchResult(response.data.DT);
+        // }
+        // return;
+    };
 
+    useEffect(() => {
+        // fetchPostion();
+    }, []);
 
     return (
-        <section className={cl('wrapper')}>
+        <div className={cl('wrapper')}>
             <div className={cl('content', 'container')}>
-                <TextSlider />
                 <div className={cl('box-search')}>
                     <div className={cl('search-city')}>
-                        <i className={cl("fa-solid fa-location-dot", 'location-icon')}></i>
+                        
+                        <i className={cl('fa-solid fa-location-dot', 'location-icon')}></i>
                         <Select showInputSearch={true} listOption={listCity} className={cl('selection')} />
+                    </div>
+                    <div className={cl('search-category')}>
+                        
+                         <i className={cl('fa-solid fa-building', 'field-icon')}></i>
+                        <Select
+                            showInputSearch={true}
+                            listOption={[
+                                { id: 0, name: 'Tất cả thành phố' },
+                                { id: 1, name: 'Hà Nội' },
+                                { id: 2, name: 'Đà Nẵng' },
+                                { id: 3, name: 'Cần thơ' },
+                                { id: 4, name: 'Thanh Hóa' },
+                            ]}
+                            className={cl('selection')}
+                        />
                     </div>
 
                     <div className={cl('search-job')}>
@@ -115,7 +127,7 @@ function SearchJob() {
                         {searchValue && searchResult ? (
                             <PopperWrapper className={cl('search-result')}>
                                 {searchResult
-                                    .filter((obj: object) => {
+                                    .filter((obj) => {
                                         return obj.name
                                             .normalize('NFD')
                                             .replace(/[\u0300-\u036f]/g, '')
@@ -128,9 +140,7 @@ function SearchJob() {
                                             );
                                     })
                                     .map((item) => {
-                                        return (
-                                            <SearchItem value={item} key={item.id} onClick={handleChooseSearchItem} />
-                                        );
+                                        return <SearchItem value={item} key={item.id} />;
                                     })}
                             </PopperWrapper>
                         ) : (
@@ -139,29 +149,16 @@ function SearchJob() {
                     </div>
 
                     <div className={cl('search-button')}>
-                        <Button >
-                         <i className={cl("fa-solid fa-magnifying-glass")} style={{marginRight:'4px'}}></i>
+                        <Button>
+                          
+                             <i className={cl('fa-solid fa-search')} style={{marginRight: '2px'}}></i>
                             Tìm kiếm
                         </Button>
                     </div>
                 </div>
-                <div className={cl('suggestion-job')}>
-                    <div className={cl('suggestion-job_title')}>Gợi ý cho bạn:</div>
-                    <div className={cl('suggestion-job_tag')}>
-                        <a href="" className={cl('itag')}>
-                            Lập trình viên
-                        </a>
-                        <a href="" className={cl('itag')}>
-                            Kỹ sư
-                        </a>
-                        <a href="" className={cl('itag')}>
-                            Kế toán
-                        </a>
-                    </div>
-                </div>
             </div>
-        </section>
+        </div>
     );
 }
 
-export default SearchJob;
+export default JobLookUp;

@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
      
           <SearchJob />
-          {/* <ListJob /> */}
+          <ListJob />
           <TopCompany />
           <Footer /> 
        

@@ -1,5 +1,5 @@
 import classnames from 'classnames/bind';
-import styles from './Pagination.module.scss';
+import styles from '../styles/pagination.module.scss'
 
 interface props {
     currentPage : number,

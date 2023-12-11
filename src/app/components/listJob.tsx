@@ -1,7 +1,7 @@
 'use client'
 
 import Select from './select';
-import styles from './ListJob.module.scss';
+import styles from '../styles/listJob.module.scss'
 import classNames from 'classnames/bind';
 
 import ListJobItem from './listJobItem';
@@ -15,7 +15,7 @@ const cl = classNames.bind(styles);
 
 function ListJob() {
     const tagBarRef = React.useRef<any>(null);
-    const [listJob, setListJob] = useState([]);
+    const [listJob, setListJob] = useState([{id: 1, name: '', logo: 'https://cdn-new.topcv.vn/unsafe/200x/filters:format(webp)/https://static.topcv.vn/company_logos/cong-ty-tnhh-kohnan-viet-nam-61949ebb1b4d7.jpg'}]);
     const [currentPage, setCurrentPage] = useState(1);
     const [currentLimit, setCurrentLimit] = useState(12);
     const [totalPages, setTotalPages] = useState(0);
@@ -23,38 +23,38 @@ function ListJob() {
     const [disableButtonRight, setDisableButtonRight] = useState(false);
 
     const handleShowTagRight = () => {
-        setDisableButtonLeft(false);
-        const distanceToScroll = tagBarRef?.current?.offsetWidth;
-        let scrollAmount = 0;
-        const slideTimer = setInterval(() => {
-            let step = 10;
-            tagBarRef?.current?.scrollLeft += step;
-            scrollAmount += Math.abs(step);
-            console.log(scrollAmount);
-            if (scrollAmount >= distanceToScroll) {
-                clearInterval(slideTimer);
-            }
-            if (scrollAmount >= tagBarRef.current.scrollWidth - tagBarRef.current.scrollLeft) {
-                setDisableButtonRight(true);
-            }
-        }, 10);
+        // setDisableButtonLeft(false);
+        // const distanceToScroll = tagBarRef?.current?.offsetWidth;
+        // let scrollAmount = 0;
+        // const slideTimer = setInterval(() => {
+        //     let step = 10;
+        //     tagBarRef?.current?.scrollLeft += step;
+        //     scrollAmount += Math.abs(step);
+        //     console.log(scrollAmount);
+        //     if (scrollAmount >= distanceToScroll) {
+        //         clearInterval(slideTimer);
+        //     }
+        //     if (scrollAmount >= tagBarRef.current.scrollWidth - tagBarRef.current.scrollLeft) {
+        //         setDisableButtonRight(true);
+        //     }
+        // }, 10);
     };
 
     const handleShowTagLeft = () => {
-        setDisableButtonRight(false);
-        const distanceToScroll = tagBarRef.current.offsetWidth;
-        let scrollAmount = 0;
-        const slideTimer = setInterval(() => {
-            let step = 10;
-            tagBarRef.current.scrollLeft -= step;
-            scrollAmount += Math.abs(step);
-            if (scrollAmount >= distanceToScroll) {
-                clearInterval(slideTimer);
-            }
-            if (tagBarRef.current.scrollLeft == 0) {
-                setDisableButtonLeft(true);
-            }
-        }, 10);
+        // setDisableButtonRight(false);
+        // const distanceToScroll = tagBarRef.current.offsetWidth;
+        // let scrollAmount = 0;
+        // const slideTimer = setInterval(() => {
+        //     let step = 10;
+        //     tagBarRef.current.scrollLeft -= step;
+        //     scrollAmount += Math.abs(step);
+        //     if (scrollAmount >= distanceToScroll) {
+        //         clearInterval(slideTimer);
+        //     }
+        //     if (tagBarRef.current.scrollLeft == 0) {
+        //         setDisableButtonLeft(true);
+        //     }
+        // }, 10);
     };
 
     const boxTag = [
@@ -78,6 +78,8 @@ function ListJob() {
         { id: 3, name: 'Kinh Nghiệm' },
         { id: 4, name: 'Ngành nghề' },
     ];
+
+   
 
     const handlePageClick = (event: any) => {
         setCurrentPage(+event.selected + 1);
